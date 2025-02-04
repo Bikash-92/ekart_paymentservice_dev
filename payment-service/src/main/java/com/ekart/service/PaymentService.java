@@ -46,6 +46,10 @@ public class PaymentService {
         invoice.setAmount(order.getItems().stream().map(Item::getAmount).reduce(0.0, Double::sum));
         invoice.setCustomerName("System Generate");
         invoice.setPurchaseDate(new Date());
+        invoice.setCity(order.getShippingAddress().getCity());
+        invoice.setState(order.getShippingAddress().getName());
+        invoice.setState(order.getShippingAddress().getState());
+        invoice.setZipCode(order.getShippingAddress().getZipCode());
         String jsonString = null;
         try {
             ObjectMapper objectMapper = new ObjectMapper();
