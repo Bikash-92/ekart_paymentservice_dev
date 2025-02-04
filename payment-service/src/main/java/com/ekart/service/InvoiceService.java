@@ -59,12 +59,10 @@ public class InvoiceService {
         document.add(new Paragraph("Invoice Details"));
         document.add(new Paragraph("Customer: " + invoice.getCustomerName()));
         document.add(new Paragraph("Total Amount: " + invoice.getAmount()));
-        document.add(new Paragraph("Shipping Address : "));
-        document.add(new Paragraph("____________________________"));
         document.add(new Paragraph("Name :"+invoice.getRecipientName()));
         StringBuffer buffer = new StringBuffer();
         buffer.setLength(0);
-        buffer.append("City: ").append(invoice.getCity()).append("\n").
+        buffer.append("\n").append("City: ").append(invoice.getCity()).append("\n").
                 append("State: ").append(invoice.getState()).append("\n")
                         .append("Zip code: ").append(invoice.getZipCode());
         document.add(new Paragraph("Shipping Address:  "+buffer.toString()));
