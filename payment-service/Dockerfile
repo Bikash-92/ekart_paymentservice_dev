@@ -11,4 +11,4 @@ RUN pwd
 RUN ls -al /app
 RUN cd /app/target && ls -al
 EXPOSE 8080
-CMD ["java", "-jar", "./target/order-service-0.0.1-SNAPSHOT.jar"]
+CMD ["java", "-jar", "./target/payment-service-0.0.1-SNAPSHOT.jar"]
