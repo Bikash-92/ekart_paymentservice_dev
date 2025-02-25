@@ -48,7 +48,7 @@ public class PaymentService {
         invoice.setPurchaseDate(new Date());
         invoice.setCity(order.getShippingAddress().getCity());
         invoice.setState(order.getShippingAddress().getName());
-        invoice.setState(order.getShippingAddress().getState());
+        invoice.setRecipientName(order.getShippingAddress().getState());
         invoice.setZipCode(order.getShippingAddress().getZipCode());
         String jsonString = null;
         try {
